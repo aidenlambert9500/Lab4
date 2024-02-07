@@ -1,9 +1,9 @@
 <!--
 =========================================================
-Name        : index.html
+Name        : responsive.html
 Assignment  : Lab 4 Exercise B
-Author(s)   : Mahdi Ansari, William Arthur Philip Louis
-Submission  : May 21, 2030
+Author(s)   : Omar Ahmed, Aiden Lambert
+Submission  : Feb 7, 2024
 Description : Responsive Layouts.
 =========================================================
 -->
@@ -18,9 +18,10 @@ Description : Responsive Layouts.
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- First, link the menu.css file here -->
+	<link rel="stylesheet" href="menu.css">
 
 	<style>	
-		/* Remove borders at the end, they have been add just for detecting positions of items*/	
+		/* Remove borders at the end, they have been add just for detecting positions of items	
 		div {
 			border: 1px dashed gray;	
 		}
@@ -35,7 +36,8 @@ Description : Responsive Layouts.
 		}
 		.small {
 			border: 1px solid yellow;	
-		}		
+		}
+		*/		
 	</style>
 
     <style>
@@ -48,34 +50,48 @@ Description : Responsive Layouts.
         .news-item { padding: 10px; }
 		
 		.row { 
+			display: block;
+			box-sizing: border-box;
 			/*I need some CSS codes.*/		
 		}
 
 		.large, .medium, .small {
+			
+	      box-sizing: border-box;
+		  float: left;
 			/*I need some CSS codes.*/
 		}
 		
 		.gap {
+			height: 20px;
+			clear: both;
 			/*I need some CSS codes.*/
 		}
 
 		@media screen and (min-width: 769px) {			
-			.large { 
-				/*I need some CSS codes.*/
-			}
-			.medium { 
-				/*I need some CSS codes.*/
-			}
-			.small { 
-				/*I need some CSS codes.*/
-			 }
+			.large { width: 100%;}
+			.medium {width: 70%}
+			.small {width: 30%}
 		}
+				
+				/*I need some CSS codes.*/
 
         @media screen and (max-width: 768px) {
+			.menu {width: 100%; display: inline-block;}
+			.main{margin-left: 0;}
+			.large{width: 100%;}
+			.medium{width: 60%;}
+			.small{ width: 40%;}
+		 
             /*I need some CSS codes.*/
         }
 
         @media screen and (max-width: 480px) {
+			.news-item header h1{ font-size: 18px;}
+			.medium, .small {
+				width: 100%;
+				float: none;
+			}
 			/*I need some CSS codes.*/
         }
 
@@ -135,7 +151,7 @@ Description : Responsive Layouts.
 				<!-- Medium news item -->
 				<div class="medium news-item">
 					<header>
-						<h1>Mahdi Ansari Takes a Historic Spacewalk Near the ISS</h1>
+						<h1>Omar Ahmed Takes a Historic Spacewalk Near the ISS</h1>
 					</header>
 					<img src="images/medium.jpg" alt="Medium Image">
 					<article>
@@ -143,7 +159,7 @@ Description : Responsive Layouts.
 						<p>In an unprecedented feat of human courage and technological prowess, astronaut Mahdi Ansari completed a spacewalk near the International Space Station (ISS), marking a new milestone in space exploration.</p>
 
 						<h3>A Breathtaking Journey</h3>
-						<p>Ansari, aboard the spacecraft Voyager X, ventured out into the void of space, capturing breathtaking views of Earth and conducting important research that could pave the way for future interstellar travel.</p>
+						<p>Omar, aboard the spacecraft Voyager X, ventured out into the void of space, capturing breathtaking views of Earth and conducting important research that could pave the way for future interstellar travel.</p>
 
 						<h3>Pushing the Boundaries of Science</h3>
 						<p>The successful spacewalk not only demonstrates human resilience but also advances our understanding of space and our capabilities to explore further into the unknown.</p>
@@ -160,3 +176,4 @@ Description : Responsive Layouts.
     </div>
 </body>
 </html>
+
